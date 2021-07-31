@@ -1,7 +1,12 @@
 import React from "react";
 import { useFormik } from "formik";
 import { useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Dialog } from 'primereact/dialog';
+import { Button } from 'primereact/button';
+import { InputText } from 'primereact/inputtext';
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
+import { Toolbar } from 'primereact/toolbar';
 
 const ModalCadastro = ({ show, onHide}: ModalProps) => {
   const form = useFormik<CategoriaFormProps>({
@@ -14,27 +19,25 @@ const ModalCadastro = ({ show, onHide}: ModalProps) => {
   })
 
   return (
-    <Modal show={show} onHide={onHide}>
-      <Modal.Header closeButton>
-        <Modal.Title>Nova Categoria</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Form>
-          <Form.Group className="mb-3" controlId="nome">
-            <Form.Label>Nome</Form.Label>
-            <Form.Control type="text" placeholder="Nome" value={form.values.nome} onChange={form.handleChange} />
-          </Form.Group>
-        </Form>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={onHide}>
-          Cancelar
-        </Button>
-        <Button variant="success" onClick={form.submitForm}>
-          Salvar
-        </Button>
-      </Modal.Footer>
-    </Modal>
+    <Dialog
+      style={{ width: '30vw' }}
+      visible={show}
+      onHide={onHide}
+      header={<h3>Nova Categoria</h3>}
+      footer={
+        <>
+          <Button className="p-button-secondary" onClick={onHide} label="Cancelar" />
+          <Button className="p-button-success" onClick={form.submitForm} label="Salvar" />
+        </>
+      }  
+    >
+        <form>
+          <span className="p-float-label">
+            <InputText style={{ width: '100%' }} id="nome" name="nome" value={form.values.nome} onChange={form.handleChange} />
+            <label htmlFor="nome">Nome</label>
+          </span>
+        </form>
+    </Dialog>
   );  
 };
 
@@ -42,12 +45,18 @@ const Categorias = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
-    <div id="categorias" className="">
+    <div id="categorias" className="grid mx-0 justify-content-center">
       <ModalCadastro show={modalVisible} onHide={() => setModalVisible(false)} />
-      Categorias
-      <Button variant="primary" onClick={() => setModalVisible(true)}>
-        Nova Categoria
-      </Button>
+      <div className="col-10">
+        <Toolbar
+          className="py-0 px-2 border-none bg-white"
+          left={<p className="font-light text-3xl my-3">Categorias</p>}
+          right={<Button className="p-button-success text-right" onClick={() => setModalVisible(true)} label="Nova Categoria" icon="fas fa-tasks" />}
+        />
+        <DataTable value={[{ nome: 'Faculdade'}, {nome: 'Outras'}]} className="border-1 border-300">
+          <Column field="nome" header="Nome" />
+        </DataTable>
+      </div>
     </div>
   )
 };

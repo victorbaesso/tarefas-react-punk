@@ -1,26 +1,36 @@
 import React from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Menubar } from 'primereact/menubar';
 
-const TopMenu = () => (
-  <Navbar
-    bg="dark"
-  >
-    <Nav.Item>
-      <Nav.Link href="#home">Home</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="#tarefas">Tarefas</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="#categorias">Categorias</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="#prioridades">Prioridades</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="#situacao">Situação</Nav.Link>
-    </Nav.Item>
-  </Navbar>
-);
+const TopMenu = () => {
+ 
+  const items = [
+    {
+      label: 'Tarefas',
+      icon: 'fas fa-tasks'
+    },
+    {
+      label: 'Categorias',
+      icon: 'fas fa-boxes'
+    },
+    {
+      label: 'Prioridades',
+      icon: 'fas fa-list-ol'
+    },
+    {
+      label: 'Situações',
+      icon: 'fas fa-chart-line'
+    }
+  ]
+
+  const start = <img alt="logo" src="./logo.png" height="40" className="p-mr-2"></img>;
+ 
+ return (
+  <div>
+    <div className="card">
+        <Menubar model={items} start={start} />
+    </div>
+  </div>
+ );
+};
 
 export default TopMenu;
