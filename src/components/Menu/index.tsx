@@ -10,7 +10,7 @@ const TopMenu = () => {
     },
     {
       label: 'Categorias',
-      icon: 'fas fa-boxes'
+      icon: 'fas fa-thumbtack'
     },
     {
       label: 'Prioridades',
