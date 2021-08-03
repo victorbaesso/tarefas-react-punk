@@ -90,7 +90,7 @@ const Tarefas = () => {
   };
 
   return (
-    <div id="Tarefas" className="grid mx-0 justify-content-center">
+    <div id="tarefas" className="grid mx-0 justify-content-center">
       <ModalCadastro tarefa={selectedTarefa} show={modalVisible} onHide={() => setModalVisible(false)} />
       <div className="col-10">
         <Toolbar
