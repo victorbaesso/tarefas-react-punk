@@ -19,9 +19,9 @@ const Prioridades = () => {
 
   useEffect(() => {
     setPrioridadesCount([{
-      alta: totais['Alta'],
-      media: totais['Média'],
-      baixa: totais['Baixa'],
+      alta: totais['Alta'] || 0,
+      media: totais['Média'] || 0,
+      baixa: totais['Baixa'] || 0,
     }])
   }, [totais]);
 
@@ -33,9 +33,9 @@ const Prioridades = () => {
         left={<p className="font-light text-3xl my-3">Prioridades</p>}
       />
       <DataTable value={prioridadesCount} className="border-1 border-300">
-        <Column field="baixa" header="Baixa" />
-        <Column field="media" header="Média" />
-        <Column field="alta" header="Alta" />
+        <Column field="baixa" header="Baixa" className="text-center" />
+        <Column field="media" header="Média" className="text-center" />
+        <Column field="alta" header="Alta" className="text-center" />
       </DataTable>
     </div>
   </div>

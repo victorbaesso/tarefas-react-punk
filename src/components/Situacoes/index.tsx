@@ -19,9 +19,9 @@ const Situacoes = () => {
 
   useEffect(() => {
     setSituacoesCount([{
-      analise: totais['Análise'],
-      andamento: totais['Andamento'],
-      finalizada: totais['Finalizada'],
+      analise: totais['Análise'] || 0,
+      andamento: totais['Andamento'] || 0,
+      finalizada: totais['Finalizada'] || 0,
     }])
   }, [totais]);
 
@@ -33,9 +33,9 @@ const Situacoes = () => {
         left={<p className="font-light text-3xl my-3">Situações</p>}
       />
       <DataTable value={situacoesCount} className="border-1 border-300">
-        <Column field="analise" header="Análise" />
-        <Column field="andamento" header="Andamento" />
-        <Column field="finalizada" header="Finalizada" />
+        <Column field="analise" header="Análise" className="text-center" />
+        <Column field="andamento" header="Andamento" className="text-center" />
+        <Column field="finalizada" header="Finalizada" className="text-center" />
       </DataTable>
     </div>
   </div>
