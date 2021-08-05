@@ -2,6 +2,7 @@
 
 <h2>Versão melhorada de um trabalho feito na faculdade</h2>
 <a href="https://github.com/victorbaesso/gerenciadorpunk">Repositório original</a>
+<br />
 <a href="https://relaxed-galileo-5401e6.netlify.app/">Projeto original</a>
 <h3>Utilizando React e Typescrypt</h3>
 
