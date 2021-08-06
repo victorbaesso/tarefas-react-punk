@@ -3,7 +3,9 @@
 <h2>Versão melhorada de um trabalho feito na faculdade</h2>
 
 <h3>Utilizando React e Typescrypt</h3>
-<a href="https://github.com/victorbaesso/gerenciadorpunk">Repositório versão original</a><br />
+<a href="https://github.com/victorbaesso/gerenciadorpunk">Repositório versão original</a>
+<br />
+
 ***Todos os direitos reservados Joao Victor Baesso®***
 
 
