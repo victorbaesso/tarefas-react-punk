@@ -32,7 +32,7 @@ function App() {
         </div>
       </div>
       <div className="grid mx-0">
-        <div className="col-12 px-0">
+        <div className="col-12 p-0">
           <Footer />
         </div>
       </div>
