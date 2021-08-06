@@ -17,9 +17,9 @@ const Banner = () => {
       <div className="col-10 col-offset-1 border-top-1 border-bluegray-200" />
       <h3 className="text-6xl font-light my-3">Comece Agora !!!</h3>
       <h4 className="text-xl font-light my-3">Cadastre primeiro algumas categorias...</h4>
-      <Button className="p-button-primary p-button-lg text-right mb-3" onClick={() => showCategoriasModal(true)} label="Nova Categoria" icon="fas fa-thumbtack" />
+      <Button className="p-button-primary p-button-lg text-right mb-3" onClick={() => showCategoriasModal(true)} label="Nova Categoria" icon="fas fa-tasks" />
       <h4 className="text-xl font-light my-3">E depois suas tarefas...</h4>
-      <Button className="p-button-success p-button-lg text-right mb-3" onClick={() => showTarefasModal(true)} label="Nova Tarefa" icon="fas fa-tasks" />
+      <Button className="p-button-success p-button-lg text-right mb-3" onClick={() => showTarefasModal(true)} label="Nova Tarefa" icon="fas fa-thumbtack" />
     </div>
   )
 };

@@ -28,7 +28,7 @@ const Tarefas = () => {
         <Toolbar
           className="py-0 px-2 border-none bg-white"
           left={<p className="font-light text-3xl my-3">Tarefas</p>}
-          right={<Button className="p-button-success text-right" onClick={() => setModalVisible(true)} label="Nova Tarefa" icon="fas fa-tasks" />}
+          right={<Button className="p-button-success text-right" onClick={() => setModalVisible(true)} label="Nova Tarefa" icon="fas fa-edit" />}
         />
         <DataTable
           value={tarefas}

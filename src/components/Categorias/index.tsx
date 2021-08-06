@@ -28,7 +28,7 @@ const Categorias = () => {
         <Toolbar
           className="py-0 px-2 border-none bg-white"
           left={<p className="font-light text-3xl my-3">Categorias</p>}
-          right={<Button className="p-button-success text-right" onClick={() => setModalVisible(true)} label="Nova Categoria" icon="fas fa-thumbtack" />}
+          right={<Button className="p-button-success text-right" onClick={() => setModalVisible(true)} label="Nova Categoria" icon="fas fa-tasks" />}
         />
         <DataTable value={categorias} className="border-1 border-300" emptyMessage="Nenhum registro encontrado">
           <Column field="nome" header="Nome" />
