@@ -4,30 +4,17 @@ import { Menubar } from 'primereact/menubar';
 const TopMenu = () => {
  
   const items = [
-    {
-      label: 'Tarefas',
-      icon: 'fas fa-tasks'
-    },
-    {
-      label: 'Categorias',
-      icon: 'fas fa-thumbtack'
-    },
-    {
-      label: 'Prioridades',
-      icon: 'fas fa-list-ol'
-    },
-    {
-      label: 'Situações',
-      icon: 'fas fa-chart-line'
-    }
-  ]
-
-  const start = <img alt="logo" src="./logo.png" height="40" className="p-mr-2"></img>;
+    { label: 'Home' },
+    { label: 'Tarefas' },
+    { label: 'Categorias' },
+    { label: 'Prioridades' },
+    { label: 'Situações' }
+  ];
  
  return (
   <div>
     <div className="card">
-        <Menubar model={items} start={start} />
+        <Menubar model={items} />
     </div>
   </div>
  );
